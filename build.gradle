@@ -1,0 +1,24 @@
+group 'org.krisbox.birt.opencl'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+def joclGroup    = 'org.jocl'
+def joclArtifact = 'jocl'
+def joclVersion  = '2.0.0'
+
+def commonsioGroup    = 'commons-io'
+def commonsioArtifact = 'commons-io'
+def commonsioVersion  = '2.5'
+
+sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile group: joclGroup, name: joclArtifact, version: joclVersion
+    compile group: commonsioGroup, name: commonsioArtifact, version: commonsioVersion
+}
